@@ -15,4 +15,9 @@ export class TodosController {
   seyHei(): string {
     return 'hell nou';
   }
+
+  @Get()
+  async getAll(): Promise<TodoDto[]> {
+    return await this.todoService.getAllTodo();
+  }
 }

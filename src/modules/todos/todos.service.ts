@@ -21,4 +21,8 @@ export class TodosService {
 
     return await this.todoRepository.save(todo);
   }
+
+  async getAllTodo(): Promise<TodoDto[]> {
+    return await this.todoRepository.find({});
+  }
 }
