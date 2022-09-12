@@ -6,6 +6,7 @@ export class TodoDto {
   @IsNotEmpty()
   name: string;
 
+  isCompleted: boolean;
   createdAt?: Date;
   description?: string;
 }
@@ -21,4 +22,16 @@ export class CreateTodoDto {
   @IsOptional()
   @MaxLength(500)
   description?: string;
+}
+
+export class UpdateTodoDto {
+  @IsOptional()
+  name?: string;
+
+  @IsOptional()
+  @MaxLength(500)
+  description?: string;
+
+  @IsOptional()
+  isCompleted?: boolean
 }
