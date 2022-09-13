@@ -21,7 +21,7 @@ export class Todo {
   @Column({ type: 'boolean', default: false })
   isCompleted: boolean;
 
-  @Column()
+  // @Column()
   @ManyToOne(() => User, (user) => user.id)
   user: User;
 

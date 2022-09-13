@@ -11,9 +11,10 @@ import { Todo } from 'src/modules/todos/entities/todo.entity';
 
 @Entity('user')
 export class User {
-  @PrimaryGeneratedColumn('increment') id: string;
+  @PrimaryGeneratedColumn('increment') 
+  id: string;
 
-  @Column({ type: 'varchar2', nullable: false })
+  @Column({ type: 'varchar', nullable: false })
   username: string;
 
   @Column({ type: 'varchar', nullable: false })
