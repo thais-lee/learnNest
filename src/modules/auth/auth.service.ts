@@ -79,9 +79,6 @@ export class AuthService {
     return this.jwtService.sign(
       { userId },
       {
-        // expiresIn: isLongExpired
-        //   ? this.configService.get('jwtLongExpiresIn')
-        //   : this.configService.get('jwtShortExpiresIn'),
         expiresIn: 86400,
         secret: 'secret',
       },
